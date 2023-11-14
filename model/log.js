@@ -9,4 +9,4 @@ const LogeoSchema = new Schema({
 
 
 
-module.exports = model("signin" ,LogeoSchema)
+module.exports = model("Signin" ,LogeoSchema)
