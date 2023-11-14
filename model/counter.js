@@ -5,7 +5,7 @@ const CounterSchema = new Schema({
     seq: {type: Number, default: 1}
 })
 
-const CounterModel = model("Counter",CounterSchema)
+const CounterModel = model("Counters",CounterSchema)
 
 
 module.exports = CounterModel
