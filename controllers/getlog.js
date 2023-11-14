@@ -2,7 +2,7 @@ const signins = require("../model/log")
 
 const getLogeo = async (req,res)=>{
    try {
-    const finded = await SigninModel.find()
+    const finded = await signins.find()
     res.send(finded)
    } catch (error) {
     console.log(error)
