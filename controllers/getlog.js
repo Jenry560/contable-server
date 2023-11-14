@@ -1,4 +1,4 @@
-const SigninModel = require("../model/log")
+const signins = require("../model/log")
 
 const getLogeo = async (req,res)=>{
    try {

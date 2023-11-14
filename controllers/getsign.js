@@ -1,11 +1,11 @@
-const SigninModel = require("../model/log")
+const signins = require("../model/log")
 const bcrypt = require('bcrypt');
 
 const getSign = async (req,res)=>{
     const {Correo,Contraseña} = req.body
 
   try {
-    const user = await SigninModel.findOne({Correo: Correo})
+    const user = await signins.findOne({Correo: Correo})
     if(user){
         let compare = await bcrypt.compare(Contraseña,user.Contraseña)
         if(compare){

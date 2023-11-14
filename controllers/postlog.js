@@ -1,4 +1,4 @@
-const SigninModel = require("../model/log")
+const signins = require("../model/log")
 const bcrypt = require('bcrypt');
 
 
@@ -6,12 +6,12 @@ const postlog = async(req,res)=>{
     const {Nombre,Correo,Contraseña}=req.body;    
     
     try {
-        const registrado = await SigninModel.findOne({Correo: Correo})
+        const registrado = await signins.findOne({Correo: Correo})
         if (registrado) {
             res.send({check: false , mensaje : "El correo ya esta registrado"})
         } else {
             let ContraHash = await bcrypt.hash(Contraseña,8)
-            const NuevoLogeo = new SigninModel({
+            const NuevoSignins = new signins({
                 Nombre,
                 Correo,
                 Contraseña: ContraHash
