@@ -18,7 +18,7 @@ const postlog = async(req,res)=>{
             });
 
             
-           const guardado = await NuevoLogeo.save()
+           const guardado = await NuevoSignins.save()
            if (guardado) {
                 res.send({check: true , mensaje : "El correo se registro correctamente"})
            } else {
