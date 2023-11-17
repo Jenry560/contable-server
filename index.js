@@ -26,6 +26,9 @@ app.post('/postTrans',controllers.postTrans)
 //Liquidar transaccciones 
 app.post("/liquidar",controllers.postliquidar)
 
+//google
+app.post("/google",controllers.postGoogle)
+
 PORT = process.env.process || 4000
 
 app.listen(PORT,()=>{

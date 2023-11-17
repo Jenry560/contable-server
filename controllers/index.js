@@ -6,7 +6,7 @@ const postCliente = require("./postcliente")
 const getTrans = require("./getTransa")
 const postTrans = require("./postTrans")
 const postliquidar = require("./postliquidar")
-
+const postGoogle = require("./postgoogle")
 
 
 
@@ -18,6 +18,6 @@ module.exports ={
     postCliente,
     getTrans,
     postTrans,
-    postliquidar
-
+    postliquidar,
+    postGoogle
 }
