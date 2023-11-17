@@ -3,9 +3,9 @@ const bcrypt = require('bcrypt');
 
 const getSign = async (req,res)=>{
     const {Correo,Contraseña} = req.body
-
+    let correTower = Correo.toLowerCase()
   try {
-    const user = await signins.findOne({Correo: Correo})
+    const user = await signins.findOne({Correo: correTower})
     if(user){
         let compare = await bcrypt.compare(Contraseña,user.Contraseña)
         if(compare){
