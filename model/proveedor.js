@@ -6,7 +6,7 @@ const ProveedorSchema = new Schema({
     Direccion: String,
     Numero: String,
     Rnc: String,
-    Rnc: String,
+    Correo: String,
     Registro:String
 })
 
