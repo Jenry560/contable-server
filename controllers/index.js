@@ -7,7 +7,8 @@ const getTrans = require("./getTransa")
 const postTrans = require("./postTrans")
 const postliquidar = require("./postliquidar")
 const postGoogle = require("./postgoogle")
-
+const getProveedor = require("./getproveedor")
+const postProveedor = require("./postproveedor")
 
 
 module.exports ={
@@ -19,5 +20,7 @@ module.exports ={
     getTrans,
     postTrans,
     postliquidar,
-    postGoogle
+    postGoogle,
+    getProveedor,
+    postProveedor
 }

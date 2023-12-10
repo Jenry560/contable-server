@@ -29,6 +29,10 @@ app.post("/liquidar",controllers.postliquidar)
 //google
 app.post("/google",controllers.postGoogle)
 
+//Estructura de los proveedores
+app.get('/getProveedores',controllers.getProveedor)
+app.post('/postProveedor',controllers.postProveedor)
+
 PORT = process.env.process || 4000
 
 app.listen(PORT,()=>{
