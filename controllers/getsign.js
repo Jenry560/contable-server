@@ -7,11 +7,12 @@ const getSign = async (req,res)=>{
   try {
     const user = await signins.findOne({Correo: correTower})
     if(user){
-        let compare = await bcrypt.compare(Contraseña,user.Contraseña)
+        const compare = await bcrypt.compare(Contraseña,user.Contraseña)
+        
         if(compare){
-            res.send({check: true , mensaje: "La Contraseña es correcta",Nombre: user.Nombre,Correo: user.Correo})
+          res.json({ check: true, mensaje: "La Contraseña es correcta", Nombre: user.Nombre, Correo: user.Correo });
         }else{
-            res.send({check: false , mensaje: "La Contraseña es incorrecta"})   
+          res.send({check: false , mensaje: "La Contraseña es incorrecta"})   
         }
     }else{
        res.send({check: false , mensaje: "El correo no es valido"})
