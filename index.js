@@ -10,7 +10,7 @@ app.use(express.json())
 
 require("dotenv").config()
 
-//Estructura de los logeo
+//Estructura de los logeos
 app.get("/getlog",controllers.getLogeo)
 app.post("/postlog",controllers.postlog)
 app.post("/compare",controllers.getSign)
