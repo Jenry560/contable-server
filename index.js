@@ -33,7 +33,7 @@ app.post("/google",controllers.postGoogle)
 app.get('/getProveedores',controllers.getProveedor)
 app.post('/postProveedor',controllers.postProveedor)
 
-PORT = process.env.process || 4000
+PORT = process.env.PORT || 4000
 
 app.listen(PORT,()=>{
     console.log(`Server on ${PORT}`)
