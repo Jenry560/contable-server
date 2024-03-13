@@ -1,8 +1,6 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
-mongoose.connect(
-  "mongodb+srv://Jenry:Jenry560@cluster0.tkoex7w.mongodb.net/contable?retryWrites=true&w=majority"
-);
+mongoose.connect(process.env.DATA_BASEURL);
 
 const objetodb = mongoose.connection;
 
